@@ -1,0 +1,130 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to top, #4c5c76 40%, #28263a);
+    margin: 0;
+    font-family: cursive;
+}
+
+main{
+    max-width: 80%;
+    margin: 0  auto;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.is-grid {
+    position: relative;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: repeat(3, 0.5fr);
+    grid-gap: 3em;
+}
+
+.text-container {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+    text-align:justify;
+}
+
+.text-container h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.text-container p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+.image{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+
+}
+
+.img{
+
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: inset 0 0 1px #000, 0 0 0 #000;
+    transition: all 0.3s ease-in-out;
+    position: sticky;
+    top: 150px;
+}
+.img:hover{
+    box-shadow: inset 0 0 0 #000, 0 8px 15px #000;
+}
+
+
+
+@media (max-width: 991px){
+    main{
+        margin-top: 100px;
+        margin-bottom: 0;
+    }
+    .container{
+        grid-gap:0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+    }
+    .text-container{
+        margin: 0;
+    }
+    .text-container p{
+        font-size: 1rem;
+    }
+    .text-container h2{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .block-2{
+        grid-row: 1;
+        float: left;
+    }
+    .block-1{
+        grid-row: 2;
+    }
+    .block-5{
+        grid-row: 6;
+    }
+    .img{
+        max-height: 400px;
+        margin-bottom: 4em;
+    }
+}
+
+
+
+/* @media (min-width: 768px) {
+    .block-1 {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .text-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: minmax(30vh, auto);
+        column-gap: 32px;
+    }
+
+    .block-1 {
+        grid-column: 1 / 6;
+    }
+
+    .block-2 {
+        grid-column: 6 / 12;
+    }
+} */
+
+
